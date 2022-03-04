@@ -22,7 +22,6 @@ exports.getCart = (req, res, next) => {
 }
 
 exports.deleteProduct = (req, res, next) => {
-    console.log('here')
     Cart.destroy({
         where: {id: req.body.id}
     })

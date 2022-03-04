@@ -41,7 +41,6 @@ export default {
                         this.$router.push('/cart')
                     })
             }
-
         }
     },
     mounted() {

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-    <div class="logo"> <router-link to="/"> <img src="@/assets/logo.png" alt="">  </router-link> </div>
-    <div class="shopping-cart"> <router-link to="/cart"> <img src="@/assets/cart.svg" alt=""> </router-link></div>
+    <div class="logo"> <router-link id="home-link" to="/"> <img src="@/assets/logo.png" alt="">  </router-link> </div>
+    <div class="shopping-cart"> <router-link id="cart-link" to="/cart"> <img src="@/assets/cart.svg" alt=""> </router-link></div>
   </div>
 </template>
 
