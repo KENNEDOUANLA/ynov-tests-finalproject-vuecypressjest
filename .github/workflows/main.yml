@@ -16,11 +16,12 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Tests:
-    runs-on: node-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Run Tests
         run: |
           cd front
-          npm install
+          npm ci
+          npm run lint
           npm run test:unit
