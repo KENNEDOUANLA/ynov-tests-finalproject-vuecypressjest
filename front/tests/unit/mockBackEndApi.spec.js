@@ -34,6 +34,6 @@ it('Mock BackEnd API', async () => {
   shallowMount(Cart)
   expect(axios.get).toHaveBeenCalledTimes(1)
   expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/cart/getCart')
-  var result = await axios.get('http://localhost:3000/cart/getCart')
+  var result = await axios.get('http://localhost:3000/cart/getCart').catch(error => { throw error})
   expect(result).toEqual(apiDatas)
 })
