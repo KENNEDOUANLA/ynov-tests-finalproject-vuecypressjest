@@ -18,8 +18,11 @@ jobs:
   Jest:
     runs-on: ubuntu-latest
     steps:
+      - name: Checout
       - uses: actions/checkout@v1
-      - name: Run Tests
-        run: cd front
-        run: npm install
-        run: npm run test:unit
+      - name: Cd front
+      - run: cd front
+      - name: Install
+      - run: npm install
+      - name: Run tests
+      - run: npm run test:unit
