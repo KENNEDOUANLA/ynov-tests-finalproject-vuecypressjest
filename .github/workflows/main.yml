@@ -23,5 +23,4 @@ jobs:
         run: |
           cd front
           npm install
-          npm run serve
           npm run test:unit
