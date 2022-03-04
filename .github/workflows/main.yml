@@ -15,8 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Jest:
-    runs-on: ubuntu-latest
+  Tests:
+    runs-on: node-latest
     steps:
       - uses: actions/checkout@v1
       - name: Run Tests
