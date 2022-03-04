@@ -18,22 +18,27 @@ var  apiDatas = [
 ]
 
 it('Mock Rick & Morty API', async () => {
-  axios.get.mockResolvedValue([
-      {
-        id: 1,
-        name: "Rick Sanchez",
-        quantity: '10'
-      },
-      {
-        id: 2,
-        name: "Morty Smith",
-        quantity: '15'
-      }
-    ])
+  try {
+    axios.get.mockResolvedValue([
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          quantity: '10'
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          quantity: '15'
+        }
+      ])
 
-  shallowMount(Home)
-  expect(axios.get).toHaveBeenCalledTimes(1)
-  expect(axios.get).toHaveBeenCalledWith('https://rickandmortyapi.com/api/character')
-  var result = await axios.get('https://rickandmortyapi.com/api/character').catch(error => { throw error})
-  expect(result).toEqual(apiDatas)
+    shallowMount(Home)
+    expect(axios.get).toHaveBeenCalledTimes(1)
+    expect(axios.get).toHaveBeenCalledWith('https://rickandmortyapi.com/api/character')
+    var result = await axios.get('https://rickandmortyapi.com/api/character').catch(error => { throw error})
+    expect(result).toEqual(apiDatas)
+  }
+  catch(err) {
+    console.log(err)
+  }
 })
