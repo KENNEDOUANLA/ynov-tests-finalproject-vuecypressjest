@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run install
-        run: npm run install
+        run: npm install -g @vue/cli@latest
 
       - name: Run test
         run: npm run test:unit
